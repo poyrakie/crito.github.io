@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&display=swap');
+
+html, body {
+    color: #191919;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    // annan font-weight än mallen då mallen visar mindre text med andra värden
+    font-weight: 300;
+    h2 {
+        font-family: 'DM Sans', 'sans-serif';
+        font-weight: 700;
+        font-size: 35px;
+
+            @media (min-width: 760px){
+                font-size: 45px;
+            }
+    }
+    .orange-p {
+        font-weight: 400;
+        color: #F94D1C;
+        // annan font-size än mallen då mallen visar mindre text med andra värden
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    h3 {
+        font-size: 22px;
+        font-family: 'DM Sans' 'Sans-serif';
+        font-weight: 700;
+    }
+    h4 {
+        font-size: 20px;
+        font-family: 'DM Sans' 'Sans-serif';
+        font-weight: 700;
+    }
+}
+.squiggly-lines {
+    position: absolute;
+}
+.transition {
+    transition: all 200ms ease-in-out;
+}
+.center-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// global klass för att flytta element till höger
+.end-content {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.success {
+    color: #37ff87;
+}
+
+.error {
+    color: #ff0000;
+}

@@ -1,0 +1,79 @@
+.projects-section {
+
+    .container {
+
+        .title-part {
+            padding-top: 70px;
+            padding-bottom: 40px;
+            text-align: center;
+            @media(min-width: 768px) {
+                padding-top: 120px;
+                padding-bottom: 90px;
+            }
+            h2 {
+                text-align: center;
+            }
+        }
+        .project-part {
+            // display hanterar artiklarna och responsiviteten
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+
+            @media (min-width: 768px) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            a {
+                // display hanterar innehålet i varje a-länk i rader
+                text-decoration: none;
+                color: #191919;
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+
+                &:hover {
+                    p {
+                        text-decoration: underline;
+                    }
+                    h3 {
+                        border-bottom: 1px solid #191919;
+                    }
+                    img {
+                        opacity: 0.5;
+                    }
+                }
+                img {
+
+                    height: auto;
+                    width: 100%;
+                }
+
+                h3 {
+
+                    padding-top: 35px;
+                    padding-bottom: 16px;
+                    border-bottom: 1px solid #DAD9D3;
+                }
+
+                p {
+
+                    padding: 15px;
+                    color: #191919;
+                    display: block;
+                    text-align: right;
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 14px;
+                    i {
+                        margin-left: 3px;
+                    }
+                }
+            }
+        }
+
+        .center-content {
+            margin-top: 50px;
+            margin-bottom: 90px;
+        }
+    }
+}

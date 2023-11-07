@@ -1,0 +1,73 @@
+.testimonial-section {
+    background-color: #F9D783;
+    padding-bottom: 120px;
+    .container {
+        text-align: center;
+        background-color: #fff;
+        padding: 120px 0px;
+        @media (min-width: 576px) {
+            padding: 120px;
+        }
+        
+        // begränsar width på den vita bakgrundsfärgen
+        @media (min-width: 1400px){
+            max-width: 1520px;
+        }
+        h2 {
+            margin: 35px 0px 100px;
+        }
+        .reviews {
+            // display sköter positionering av content-boxarna
+            text-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            @media (min-width: 1400px) {
+                flex-direction: row;
+                
+            }
+            .content-box {
+                // display sköter positionering av innehållet av boxarna
+                text-align: center;
+                margin-bottom: 100px;
+
+                @media (min-width: 576px) {
+                    text-align: start;
+                    max-width: 325px;
+                    max-height: 310px;
+                }
+                .review-text {
+                    line-height: 1;
+                    margin-bottom: 40px;
+                    @media (min-width: 576px) {
+                        line-height: 1.8;
+                    }
+                }
+                .stars {
+                    font-size: 14px;
+                    color: #F94D1C;
+                    margin-bottom: 28px;
+                }
+                .reviewer {
+                    @media (min-width: 1400px) {
+                        display: flex;  
+                    }
+                    .orange-p {
+                        border-bottom: 1px solid #DAD9D3;
+                        @media (min-width: 1400px) {
+                            border: none;
+                        }
+                    }
+                    img {
+                        margin-right: 20px;
+                        display: none;
+                        @media (min-width: 576px) {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

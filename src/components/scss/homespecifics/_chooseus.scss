@@ -1,0 +1,80 @@
+.choose-us-section {
+    // koden nedan innan gjordes innan vi gick igenom position.
+    // Denna lösning bygger på att manipulera positionen på linear gradient, vilket visar en bakgrundsfärg som går från vitt till den önskade
+    // All kred till Robin, vi satt och pillade med detta i många timmar, men han var big-brainen som faktiskt fick det att funka!
+    // bakgrunden och bilden försvinner i mobilläge
+    @media (min-width: 1200px) {
+        background-color: white; 
+        background-image: linear-gradient(to right, #F0EFE9 60%, rgba(0,0,0,0) 20%);
+        background-size: 100% 70%;
+        background-position: 40dvw 100%;
+        background-repeat: no-repeat;
+    }
+    @media (min-width: 1400px) {
+        background-position: 45dvw 100%;
+    }
+    .container {
+        // display hanterar element positionering för responsivitet
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+        @media (min-width: 1200px) {
+            justify-content: space-between; 
+            align-items: start;  
+        }
+        .why-choose-us {
+            @media (max-width: 1200px){
+                margin: auto;
+            }
+            h2 {
+                margin-top: 25px;
+                max-width: 400px;
+                text-align: center;
+                @media (min-width: 1200px){
+                    text-align: start;
+                }
+            }
+            .orange-p {
+                text-align: center;
+                @media (min-width: 1200px){
+                    text-align: start;
+                }
+            }
+            .headlines{
+                display: flex;
+                margin-top: 45px;
+                i {
+                    margin-right: 25px;
+                    border: solid 1px #DAD9D3;
+                    border-radius: 100%;
+                    font-size: 32px;
+                    height: 60px;
+                    width: 60px;
+                    text-align: center;
+                    padding-top: 13px;
+                }
+                p {
+                    font-weight: 200;
+                }
+            }
+        }
+        .choose-us-img {
+            img {
+                margin-top: 50px;
+                display:none;
+                @media (min-width: 1200px) {
+                    height: auto;
+                    width: 90%;
+                    display: block;
+                }
+                @media (min-width: 1400px) {
+                    height: 505px;
+                    width: 645px;
+                    display: block;
+                }
+            }
+       
+
+        }
+    }
+}

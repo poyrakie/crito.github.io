@@ -1,0 +1,84 @@
+.article-section {
+    padding: 120px 0px 90px;
+    .container {
+        .part-one{
+            // display hanterar positionering av titel och knapp (responsivt)
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            padding-bottom: 100px;
+            text-align: center;
+            @media (min-width: 1400px){
+                flex-direction: row;
+                text-align: start;
+            }
+            h2 {
+                margin-top: 20px;
+            }
+            .btn-transparent {
+                align-self: center;
+                margin-top: 15px;
+                @media (min-width: 1400px) {
+                    margin-top: 0px;
+                    margin-bottom: 5px;
+                    align-self: end;
+                }
+            }
+        }
+        .part-two {
+            // display hanterar positionering av a-länkarna (responsivt)
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:30px;
+            margin-bottom: 70px;
+            text-align: center;
+            @media (min-width: 1200px) {
+                flex-direction: row;
+                text-align: start;
+            }
+            a {
+                
+                text-decoration: none;
+                color: #191919;
+                position: relative;
+                h3 {
+                    
+                    margin-bottom: 28px;
+                    @media (min-width: 1200px) {
+                        max-width: 310px;
+                        
+                    }
+                }
+                &:hover {
+                    text-decoration: underline;
+                    img {
+                        opacity: 0.5;
+                    }
+                }
+                img {
+                    height: auto;
+                    width: 100%;
+                    margin-bottom: 36px;
+                }
+                .business-color {
+                    color: #6A6C71;
+                }
+                .absolute-date {
+                    position: absolute;
+                    text-align: center;
+                    top: 16px;
+                    left: 16px;
+                    background-color: #F9D783;
+                    width: 56px;
+                    height: 65px;
+                    h3 {
+                        margin-top: 10px;
+                        margin-bottom: 0px;
+                    }
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+.about-section {
+    .container {
+        // display sköter responsivitet
+        display: flex;
+        justify-content: center;
+        margin-top: 120px;
+        margin-bottom: 120px;
+        @media (min-width: 1200px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+        .samantha {
+            // använda position för att lägga element över varandra
+            display: none;
+            position: relative;
+            @media (min-width: 1200px) {
+                display: block;
+            }
+            img {
+                width: auto;
+                height: 500px;
+                margin-left: 55px;
+                @media (min-width: 1400px) {
+                    width: auto;
+                    height: 615px;
+                    }
+            }
+            .samantha-info {
+                bottom: 7rem;
+                width: 368px;
+                height: 180px;
+                background-color: #BEEBFF;
+                position: absolute;
+                @media (min-width: 1400px){
+                    bottom: 2.5rem;
+
+                }
+                div{
+                    margin-left: 22px;
+                    margin-top: 40px;
+                    h4 {
+                        display: inline;
+
+                    }
+                    .orange-p {
+                        display: inline;
+                        font-family: 'DM Sans' 'Sans-seriff';
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+    
+                    p {
+                        margin-top: 25px;
+                        font-weight: 400;
+                    }
+                }
+
+            }
+        }
+        .about-company {
+            
+            text-align: center;
+            @media (min-width: 1200px) {
+                margin-left: 200px;
+                text-align: start;
+                width: 535px;
+            }
+
+            h2 {
+                margin-top: 30px;
+                margin-bottom: 25px;
+            }
+
+            .lorem {
+                margin-top: 50px;
+                margin-bottom: 120px;
+            }
+            .btn-black {
+                display: block;
+                margin-right: 0px;
+                margin-bottom: 25px;
+                @media (min-width: 576px) {
+                    margin-bottom: 0px;
+                    margin-right: 30px;
+                    display: inline;
+                }
+            }
+            .video-button {
+                color: #191919;
+                text-decoration: none;
+                font-weight: 600;
+                i {
+
+                    text-align: center;
+                    width: 55px;
+                    height: 55px;
+                    border: 1px solid #191919;
+                    padding: 18px;
+                    border-radius: 100%;
+                    margin-right: 30px;
+                }
+                &:hover {
+                    text-decoration: underline;
+                    i {
+                        color: #fff;
+                        background-color: #191919;
+                    }
+                }
+            }
+        }
+    }
+}
