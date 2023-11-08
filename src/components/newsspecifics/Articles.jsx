@@ -1,18 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import { useArticle } from '../../context/ArticleContext'
+import { Link } from 'react-router-dom'
 
 const Articles = () => {
-    const [articles, setArticles] = useState([])
+    const { articles } = useArticle()
 
-    useEffect(() => {
-        getArticles()
-    }, [])
-
-    const getArticles = async () => {
-
-        const results = await fetch('https://win23-assignment.azurewebsites.net/api/articles')
-        setArticles(await results.json())
-        console.log(articles)
-    }
     const getMonth = (e) => {
         const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
         return month[e-1]
@@ -24,7 +16,7 @@ const Articles = () => {
         <div className="article-section">
             {
                 articles.map(article => (
-                    <div className="article-item" key={article.id}> 
+                    <Link to={`/news/${article.id}`} className="article-item" key={article.id}> 
                         <img src={article.imageUrl} />
                         <div className="absolute-date">
                             <h3>{getMonth(article.published.slice(5,7))}</h3>
@@ -33,7 +25,7 @@ const Articles = () => {
                         <p>{article.category}</p>
                         <h3>{article.author}</h3>
                         <p>{article.content}</p>
-                    </div>
+                    </Link>
                 ))
             }
         </div>

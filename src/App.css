@@ -1430,6 +1430,8 @@ footer .bot-footer .social-media a:hover {
   position: relative;
   width: 420px;
   height: 428px;
+  text-decoration: none;
+  color: #191919;
 }
 .articles-container .article-section .article-item img {
   width: 420px;
@@ -1448,4 +1450,25 @@ footer .bot-footer .social-media a:hover {
 .articles-container .article-section .article-item .absolute-date h3 {
   margin-top: 10px;
   margin-bottom: 0px;
+}
+.articles-container .article-section .article-item:hover {
+  text-decoration: underline;
+}
+.articles-container .article-section .article-item:hover img {
+  opacity: 0.7;
+}
+
+.article-details-section .article {
+  width: 768px;
+}
+.article-details-section .article .info-box {
+  display: flex;
+  gap: 30px;
+}
+.article-details-section .article .info-box .dot {
+  color: #F9D783;
+}
+.article-details-section .article img {
+  width: 758px;
+  height: 500px;
 }
