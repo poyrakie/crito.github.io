@@ -1,7 +1,10 @@
 .articles-container {
     margin-top: 140px;
-    .article-section {
+    margin-bottom: 80px;
 
+    .article-section {
+        padding-top: 50px;
+        padding-bottom: 90px;
         display: grid;
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto auto;
@@ -21,8 +24,8 @@
             .absolute-date{
                 text-align: center;
                 position: absolute;
-                top: 2rem;
-                left: 2rem;
+                top: 1.5rem;
+                left: 1.5rem;
                 background-color: #F9D783;
                 width: 56px;
                 height: 64px;
@@ -39,12 +42,47 @@
             }
         }
     }
+    .page-scroller{
+        margin-left: 30rem;
+        margin-right: 30rem;
+        display: flex;
+        gap: 5px;
+        .page-scroller-item{
+            text-decoration: none;
+            color: #191919;
+            text-align: center;
+            padding-top: 6px;
+            border: 1px solid #F0EFE9;
+            border-radius: 5px;
+            width: 38px;
+            height: 38px;
+
+            &:hover {
+                background-color: #191919;
+                border: 1px solid #191919;
+                color: #F0EFE9;
+            }
+        }
+        .current {
+            background-color: #191919;
+            border: 1px solid #191919;
+            color: #F0EFE9;
+        }
+    }
 }
 
 .article-details-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 65px;
     .article{
         width: 768px;
+        margin-top: 140px;
+        margin-bottom: 60px;
+
         .info-box{
+            margin-top: 45px;
+            margin-bottom: 80px;
             display: flex;
             gap: 30px;
             .dot {
@@ -54,6 +92,49 @@
         img{
             width: 758px;
             height: 500px;
+            margin-bottom: 55px;
+        }
+    }
+}
+
+.news-detail-article-section {
+    background-color: #F0EFE9;
+    .container{
+        padding-top: 40px;
+    }
+    .titel-box{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .article-box{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        .article-item{
+            position:relative;
+            width: 420px;
+            height: 428px;
+            text-decoration: none;
+            color: #191919;
+            img{
+                height: 230px;
+                width: 420px;
+            }
+            .absolute-date{
+                text-align: center;
+                position: absolute;
+                top: 1.5rem;
+                left: 1.5rem;
+                background-color: #F9D783;
+                width: 56px;
+                height: 64px;
+                h3 {
+                    margin-top: 10px;
+                    margin-bottom: 0px;
+                }
+            }
         }
     }
 }

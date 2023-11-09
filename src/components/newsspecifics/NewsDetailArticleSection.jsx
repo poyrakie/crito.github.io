@@ -1,19 +1,26 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useArticle } from '../../context/ArticleContext'
 import { Link } from 'react-router-dom'
+import Button from '@generics/Button'
 
-const Articles = () => {
+const NewsDetailArticleSection = () => {
     const { articles } = useArticle()
 
     const getMonth = (e) => {
         const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
         return month[e-1]
-    }
-
+      }
   return (
-    <div className="container articles-container">
-        <h2>Our News & Articles</h2>
-        <div className="article-section">
+    <section className="news-detail-article-section">
+
+        <div className="container">
+            <p className="orange-p">Article & News</p>
+            <div className="titel-box">
+                <h2>Get Every Single Articles & News</h2>
+                <Link to="/news" className="btn-transparent btn-login">Browse Articles</Link>
+            </div>
+
+            <div className="article-box">
             {
                 articles.map(article => (
                     <Link to={`/news/${article.id}`} className="article-item" key={article.id}> 
@@ -28,33 +35,10 @@ const Articles = () => {
                     </Link>
                 ))
             }
+            </div>
         </div>
-        <div className="page-scroller">
-            <a className="page-scroller-item">
-                
-                <i class="fa-solid fa-angle-left"></i>
-            </a>
-            <a className="page-scroller-item current">
-                1
-            </a>
-            <a className="page-scroller-item">
-                2
-            </a>
-            <a className="page-scroller-item">
-                3
-            </a>
-            <a className="page-scroller-item">
-                ...
-            </a>
-            <a className="page-scroller-item">
-                9
-            </a>
-            <a className="page-scroller-item">
-                <i class="fa-solid fa-angle-right"></i>
-            </a>
-        </div>
-    </div>
+    </section>
   )
 }
 
-export default Articles
+export default NewsDetailArticleSection
