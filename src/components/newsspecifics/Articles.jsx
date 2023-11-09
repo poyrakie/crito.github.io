@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useArticle } from '../../context/ArticleContext'
 import { Link } from 'react-router-dom'
+import PageScroller from './PageScroller'
 
 const Articles = () => {
     const { articles } = useArticle()
@@ -30,28 +31,13 @@ const Articles = () => {
             }
         </div>
         <div className="page-scroller">
-            <a className="page-scroller-item">
-                
-                <i class="fa-solid fa-angle-left"></i>
-            </a>
-            <a className="page-scroller-item current">
-                1
-            </a>
-            <a className="page-scroller-item">
-                2
-            </a>
-            <a className="page-scroller-item">
-                3
-            </a>
-            <a className="page-scroller-item">
-                ...
-            </a>
-            <a className="page-scroller-item">
-                9
-            </a>
-            <a className="page-scroller-item">
-                <i class="fa-solid fa-angle-right"></i>
-            </a>
+            <PageScroller number={<i className="fa-solid fa-angle-left"></i>} />
+            <PageScroller number="1" />
+            <PageScroller number="2" />
+            <PageScroller number="3" />
+            <PageScroller number="..." />
+            <PageScroller number="9" />
+            <PageScroller number={<i className="fa-solid fa-angle-right"></i>} />
         </div>
     </div>
   )

@@ -1505,6 +1505,7 @@ footer .bot-footer .social-media a:hover {
 }
 .article-details-section .article .info-box .dot {
   color: #F9D783;
+  margin-top: 4px;
 }
 .article-details-section .article img {
   width: 758px;
@@ -1524,8 +1525,9 @@ footer .bot-footer .social-media a:hover {
   margin-bottom: 40px;
 }
 .news-detail-article-section .article-box {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
   gap: 30px;
 }
 .news-detail-article-section .article-box .article-item {

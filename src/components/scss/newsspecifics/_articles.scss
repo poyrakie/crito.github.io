@@ -87,6 +87,7 @@
             gap: 30px;
             .dot {
                 color: #F9D783;
+                margin-top: 4px;
             }
         }
         img{
@@ -108,8 +109,9 @@
         margin-bottom: 40px;
     }
     .article-box{
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-auto-flow: column;
+        overflow-x: auto;
         gap: 30px;
 
         .article-item{

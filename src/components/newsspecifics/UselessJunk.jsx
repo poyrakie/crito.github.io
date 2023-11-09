@@ -1,5 +1,7 @@
 import { useFormik } from 'formik'
 import React from 'react'
+import RecentPosts from './RecentPosts'
+import Categories from './Categories'
 
 const UselessJunk = () => {
     const form = useFormik( {
@@ -12,7 +14,7 @@ const UselessJunk = () => {
   return (
     <div className="useless-junk">
             <div className="input-div">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i className="fa-solid fa-magnifying-glass"></i>
               <input 
                 type="text" 
                 name="search" 
@@ -25,12 +27,9 @@ const UselessJunk = () => {
               <div>
                 <h4>Recent Posts</h4>
                 <div className="h4-border-bit"></div>
-                <h5>How To Blow Through Capital At An Incredible Rate</h5>
-                <p>Jan 14, 2020</p>
-                <h5>Design Studios That Everyone Should Know About?</h5>
-                <p>Jan 14, 2020</p>
-                <h5>How did we get 1M+ visitors in 30 days without anything!</h5>
-                <p>Jan 14, 2020</p>
+                <RecentPosts title="How To Blow Through Capital At An Incredible Rate" date="Jan 14, 2020" />
+                <RecentPosts title="Design Studios That Everyone Should Know About?" date="Jan 14, 2020" />
+                <RecentPosts title="How did we get 1M+ visitors in 30 days without anything!" date="Jan 14, 2020" />
                 <h5>Figma On Figma: How We Built Our Website Design System</h5>
                 <p className="border-less">Jan 14, 2020</p>
               </div>
@@ -39,54 +38,12 @@ const UselessJunk = () => {
                 <div>
                   <h4>Categories</h4>
                   <div className="h4-border-bit"></div>
-                  <div className="flex-text">
-                    <h5>
-                      Technology -
-                    </h5>
-                    <p>
-                      20 Posts
-                    </p>
-                  </div>
-                  <div className="flex-text">
-                    <h5>
-                      Freelancing -
-                    </h5>
-                    <p>
-                      07 Posts
-                    </p>
-                  </div>
-                  <div className="flex-text">
-                    <h5>
-                      Writing -
-                    </h5>
-                    <p>
-                      16 Posts
-                    </p>
-                  </div>
-                  <div className="flex-text">
-                    <h5>
-                      Marketing -
-                    </h5>
-                    <p>
-                      11 Posts
-                    </p>
-                  </div>
-                  <div className="flex-text">
-                    <h5>
-                      Business -
-                    </h5>
-                    <p>
-                      35 Posts
-                    </p>
-                  </div>
-                  <div className="flex-text">
-                    <h5>
-                      Education -
-                    </h5>
-                    <p>
-                      14 Posts
-                    </p>
-                  </div>
+                  <Categories category="Technology" posts="20" />
+                  <Categories category="Freelancing" posts="07" />
+                  <Categories category="Writing" posts="16" />
+                  <Categories category="Marketing" posts="11" />
+                  <Categories category="Business" posts="35" />
+                  <Categories category="Education" posts="14" />
                 </div>
             </div>
     </div>

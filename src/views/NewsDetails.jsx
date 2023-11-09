@@ -11,7 +11,6 @@ import UselessJunk from '../components/newsspecifics/UselessJunk'
 const NewsDetails = () => {
   const { id } = useParams()
   const { article, getArticle } = useArticle()
-  console.log(id)
   useEffect(() => {
     getArticle(id)
   }, [id])
@@ -35,9 +34,9 @@ const NewsDetails = () => {
                       <h2>{article.title}</h2>
                       <div className="info-box">
                         <p>{getMonth(article.published.slice(5,7))} {article.published.slice(8,10)}, {article.published.slice(0,4)}</p>
-                        <i class="fa-solid fa-circle dot"></i>
+                        <i className="fa-solid fa-circle dot"></i>
                         <p>{article.category}</p>
-                        <i class="fa-solid fa-circle dot"></i>
+                        <i className="fa-solid fa-circle dot"></i>
                         <p>{article.author}</p>
                       </div>
                       <img src={article.imageUrl} />
@@ -54,7 +53,7 @@ const NewsDetails = () => {
                   )
                 }
               
-              <UselessJunk/>
+              <UselessJunk />
             </section>
             <NewsDetailArticleSection />
         </main>
