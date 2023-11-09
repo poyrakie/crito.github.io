@@ -32,7 +32,9 @@ const Articles = () => {
         </div>
         <div className="page-scroller">
             <PageScroller number={<i className="fa-solid fa-angle-left"></i>} />
-            <PageScroller number="1" />
+            <a className="page-scroller-item current">
+                1
+            </a>
             <PageScroller number="2" />
             <PageScroller number="3" />
             <PageScroller number="..." />
