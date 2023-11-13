@@ -1630,3 +1630,22 @@ footer .bot-footer .social-media a:hover {
 .useless-junk .useless-junk-second-box .flex-text p {
   margin-bottom: 10px;
 }
+
+.not-found-section {
+  position: relative;
+}
+.not-found-section img {
+  height: 100%;
+  width: 100%;
+}
+.not-found-section .container {
+  display: grid;
+  position: absolute;
+  color: #fff;
+  top: 10rem;
+  left: 30%;
+}
+.not-found-section .container .btn {
+  background-color: #fff;
+  color: #191919;
+}
