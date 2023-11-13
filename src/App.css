@@ -1515,6 +1515,7 @@ footer .bot-footer .social-media a:hover {
 
 .news-detail-article-section {
   background-color: #F0EFE9;
+  position: relative;
 }
 .news-detail-article-section .container {
   padding-top: 40px;
@@ -1527,8 +1528,8 @@ footer .bot-footer .social-media a:hover {
 .news-detail-article-section .article-box {
   display: grid;
   grid-auto-flow: column;
-  overflow-x: auto;
   gap: 30px;
+  padding-bottom: 8rem;
 }
 .news-detail-article-section .article-box .article-item {
   position: relative;
@@ -1544,7 +1545,7 @@ footer .bot-footer .social-media a:hover {
 .news-detail-article-section .article-box .article-item .absolute-date {
   text-align: center;
   position: absolute;
-  top: 1.5rem;
+  top: -4.5rem;
   left: 1.5rem;
   background-color: #F9D783;
   width: 56px;
@@ -1553,6 +1554,16 @@ footer .bot-footer .social-media a:hover {
 .news-detail-article-section .article-box .article-item .absolute-date h3 {
   margin-top: 10px;
   margin-bottom: 0px;
+}
+.news-detail-article-section .article-box .custom-dot-list-style {
+  bottom: 6rem;
+}
+.news-detail-article-section .article-box .react-multi-carousel-dot button {
+  background-color: #707070;
+  border: none;
+}
+.news-detail-article-section .article-box .react-multi-carousel-dot--active button {
+  background-color: #191919;
 }
 
 .useless-junk {
